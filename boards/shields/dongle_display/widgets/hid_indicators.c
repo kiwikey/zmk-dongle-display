@@ -27,10 +27,10 @@ struct hid_indicators_state {
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 
 static void set_hid_indicators(lv_obj_t *label, struct hid_indicators_state state) {
-    char text[9] = {};
+    char text[8] = {};
     // bool lock = false;
 
-	strncat(text, "Lock:", 3);
+	strncat(text, "LCK:", 4);
     if (state.hid_indicators & LED_CLCK) {
         strncat(text, "C", 1);
         // lock = true;

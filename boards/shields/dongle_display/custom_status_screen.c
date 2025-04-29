@@ -27,7 +27,7 @@ static struct zmk_widget_hid_indicators hid_indicators_widget;
 
 lv_style_t global_style;
 
-lv_obj_t *zmk_display_status_screen() {
+lv_obj_t *zmk_display_status_screen() { // CHANGED!!!
     lv_obj_t *screen;
 
     screen = lv_obj_create(NULL);
@@ -53,7 +53,7 @@ lv_obj_t *zmk_display_status_screen() {
 #endif
 
     zmk_widget_layer_status_init(&layer_status_widget, screen);
-    lv_obj_align(zmk_widget_layer_status_obj(&layer_status_widget), LV_ALIGN_BOTTOM_LEFT, 0, -12);
+    lv_obj_align(zmk_widget_layer_status_obj(&layer_status_widget), zmk_widget_modifiers_obj(&bongo_cat_widget), 0, -5); // CHANGED
     // lv_obj_align_to(zmk_widget_layer_status_obj(&layer_status_widget), zmk_widget_bongo_cat_obj(&bongo_cat_widget), LV_ALIGN_BOTTOM_LEFT, 0, 5);
 
     zmk_widget_dongle_battery_status_init(&dongle_battery_status_widget, screen);

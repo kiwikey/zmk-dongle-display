@@ -34,19 +34,19 @@ static void set_hid_indicators(lv_obj_t *label, struct hid_indicators_state stat
         strncat(text, "C", 1);
         lock = true;
     } else {
-		// strncat(text, " ", 1);
+		strncat(text, " ", 1);
 	}
     if (state.hid_indicators & LED_NLCK) {
         strncat(text, "N", 1);
         lock = true;
     } else {
-		// strncat(text, " ", 1);
+		strncat(text, " ", 1);
 	}
     if (state.hid_indicators & LED_SLCK) {
         strncat(text, "S", 1);
         lock = true;
     } else {
-		// strncat(text, " ", 1);
+		strncat(text, " ", 1);
 	}
     if (lock) {
         strncat(text, "LCK", 3);
